@@ -1,0 +1,108 @@
+.section-marketplaces {
+  background-color: #f3f5f6;
+  .section-layer {
+    flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 2.1rem;
+  }
+
+  .marketplaces-list_mobile {
+    display: flex;
+    justify-content: space-between;
+    .mp-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: calc(100% / 3);
+      &__link {
+        display: block;
+        cursor: pointer;
+      }
+      &__image {
+        width: 20vw;
+        max-width: 9.6rem;
+        height: 9.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          height: 100%;
+          display: block;
+          margin: 0;
+        }
+      }
+      &__name {
+        @include text-main;
+        color: #a2abb4;
+        text-align: center;
+      }
+    }
+  }
+  .marketplaces-list_desktop {
+    display: none;
+  }
+
+  @media (min-width: 601px) {
+    .section-layer {
+      padding-bottom: 6.5rem;
+    }
+    .marketplaces-list_mobile {
+      display: none;
+    }
+    .marketplaces-list_desktop {
+      display: flex;
+      justify-content: space-between;
+      .mp-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 1.6rem;
+        border: 0.4px solid #fff;
+        background-color: rgba(211, 217, 223, 0.6);
+        width: 30%;
+        max-width: 33rem;
+        height: 15rem;
+        padding-left: 2vw;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: 0.4s;
+        &__info {
+          display: flex;
+          gap: 1.5rem;
+          flex-direction: column;
+          transition: 0.4s;
+        }
+
+        &__name {
+          @include text-main;
+          font-weight: 700;
+        }
+
+        &__link {
+          @include text-small;
+        }
+
+        &__image {
+          position: absolute;
+          right: -1.5vw;
+          bottom: -1.5vw;
+          width: 10.5vw;
+          height: 10.5vw;
+          // max-width: 10.2rem;
+          // max-height: 10.2rem;
+          // display: flex;
+          // align-items: center;
+        }
+        img {
+          display: block;
+          width: 100%;
+        }
+
+        &:hover {
+          transform: scale(1.02);
+        }
+      }
+    }
+  }
+}
