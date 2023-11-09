@@ -18,7 +18,25 @@ window.addEventListener('load', () => {
   goNextSection();
   scrollTeaser(document.querySelector('.section-about'));
   videoTeaser();
+  handleReaction();
 });
+
+function removeAnimation(element) {
+  element.addEventListener('animationend', () => {
+    element.classList.remove('animated');
+  });
+}
+
+function handleReaction() {
+  const reactionsList = document.querySelectorAll('.reactions-item');
+  reactionsList.forEach((reaction) => {
+    const reactionImage = reaction.querySelector('.reactions-item__image_invisible');
+    reaction.addEventListener('click', () => {
+      removeAnimation(reactionImage);
+      reactionImage.classList.add('animated');
+    });
+  });
+}
 
 function goNextSection() {
   const goNextBtns = document.querySelectorAll('.js-go-next');

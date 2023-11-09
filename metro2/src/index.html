@@ -170,7 +170,7 @@
               <p class="subtext">С&nbsp;тарифом &laquo;Супер онлайн&raquo;</p>
               <button
                 class="teaser-more js-go-next js-gtm-event"
-                data-event="button_more"
+                data-event="more"
                 data-section="teaser"
               >
                 <span>Подробнее</span>
@@ -213,22 +213,46 @@
               </p>
             </div>
             <ul class="box-content__reactions-list reactions">
-              <li class="reactions__item reactions-item">
+              <li
+                class="reactions__item reactions-item js-gtm-event"
+                data-event="reaction_inlove"
+              >
                 <p class="reactions-item__text">Уже знаю</p>
                 <div class="reactions-item__image">
                   <img src="./img/icons/Favorite.svg" alt="" />
+                  <img
+                    src="./img/icons/Favorite.svg"
+                    alt=""
+                    class="reactions-item__image_invisible"
+                  />
                 </div>
               </li>
-              <li class="reactions__item reactions-item">
+              <li
+                class="reactions__item reactions-item js-gtm-event"
+                data-event="reaction_thumb"
+              >
                 <p class="reactions-item__text">Топ</p>
                 <div class="reactions-item__image">
                   <img src="./img/icons/like.svg" alt="" />
+                  <img
+                    src="./img/icons/like.svg"
+                    alt=""
+                    class="reactions-item__image_invisible"
+                  />
                 </div>
               </li>
-              <li class="reactions__item reactions-item">
+              <li
+                class="reactions__item reactions-item js-gtm-event"
+                data-event="reaction_like"
+              >
                 <p class="reactions-item__text">Я&nbsp;к&nbsp;вам</p>
                 <div class="reactions-item__image">
                   <img src="./img/icons/heart.svg" alt="" />
+                  <img
+                    src="./img/icons/heart.svg"
+                    alt=""
+                    class="reactions-item__image_invisible"
+                  />
                 </div>
               </li>
             </ul>
@@ -276,7 +300,13 @@
                 >
               </p>
             </div>
-            <a href="" class="tariff__info link">Подробнее о&nbsp;тарифе</a>
+            <a
+              href="https://spb.tele2.ru/tariff/super-online"
+              class="tariff__info link js-gtm-event"
+              data-event="tariff"
+              target="_blank"
+              >Подробнее о&nbsp;тарифе</a
+            >
             <ul class="tariff__benefits">
               <li class="benefits__item">
                 <div class="benefits__icon">
@@ -313,14 +343,14 @@
               </div>
               <div class="price__buttons">
                 <a
-                  href="https://msk.tele2.ru/shop/checkout?simplePurchase=true&tariff=everywhere-online"
+                  href="https://spb.tele2.ru/shop/checkout?simplePurchase=true&tariff=super-online"
                   class="btn btn-primary js-gtm-event"
                   data-event="conv_buy"
                   target="_blank"
                   >Купить</a
                 >
                 <a
-                  href="https://msk.tele2.ru/connectTariff"
+                  href="https://tele2.ru/connectTariff"
                   class="btn js-gtm-event"
                   data-event="conv_mnp"
                   target="_blank"
@@ -339,11 +369,13 @@
           <ul
             class="marketplaces__list marketplaces-list marketplaces-list_mobile"
           >
-            <li class="marketplaces-list__item mp-item">
+            <li
+              class="marketplaces-list__item mp-item js-gtm-event"
+              data-event="conv_ozon"
+            >
               <a
                 href="https://www.ozon.ru/product/sim-karta-tele2-sim-karta-tele2-moskva-moskovskaya-oblast-1138044514/?oos_search=false&sh=1ZPckiUiEQ"
-                class="mp-item__link js-gtm-event"
-                data-event="conv_partner-ozon"
+                class="mp-item__link"
                 target="_blank"
               >
                 <div class="mp-item__image">
@@ -352,12 +384,14 @@
               </a>
               <div class="mp-item__name">OZON</div>
             </li>
-            <li class="marketplaces-list__item mp-item">
+            <li
+              class="marketplaces-list__item mp-item js-gtm-event"
+              data-event="conv_wb"
+            >
               <a
                 href="https://www.wildberries.ru/catalog/172068306/detail.aspx?targetUrl=GP"
-                class="mp-item__link js-gtm-event"
+                class="mp-item__link"
                 target="_blank"
-                data-event="conv_partner-wild"
               >
                 <div class="mp-item__image">
                   <img src="./img/icons/icons_WB.svg" alt="" />
@@ -365,12 +399,14 @@
               </a>
               <div class="mp-item__name">Wildberries</div>
             </li>
-            <li class="marketplaces-list__item mp-item">
+            <li
+              class="marketplaces-list__item mp-item js-gtm-event"
+              data-event="conv_ya"
+            >
               <a
                 href="https://market.yandex.ru/product--sim-karta-tele2-dlia-moskovskoi-oblasti-balans-650-rublei/1918921161?sku=102311970771&uniqueId=712630&cpa=1"
-                class="mp-item__link js-gtm-event"
+                class="mp-item__link"
                 target="_blank"
-                data-event="conv_partner-market"
               >
                 <div class="mp-item__image">
                   <img src="./img/icons/icons_Ya.svg" alt="" />
@@ -386,7 +422,7 @@
             <a
               class="marketplaces-list__item mp-item js-gtm-event"
               href="https://www.ozon.ru/product/sim-karta-tele2-sim-karta-tele2-moskva-moskovskaya-oblast-1138044514/?oos_search=false&sh=1ZPckiUiEQ"
-              data-event="conv_partner-ozon"
+              data-event="conv_ozon"
               target="_blank"
             >
               <span class="mp-item__info">
@@ -400,7 +436,7 @@
             <a
               class="marketplaces-list__item mp-item js-gtm-event"
               href="https://www.wildberries.ru/catalog/172068306/detail.aspx?targetUrl=GP"
-              data-event="conv_partner-wild"
+              data-event="conv_wb"
               target="_blank"
             >
               <span class="mp-item__info">
@@ -414,7 +450,7 @@
             <a
               class="marketplaces-list__item mp-item js-gtm-event"
               href="https://market.yandex.ru/product--sim-karta-tele2-dlia-moskovskoi-oblasti-balans-650-rublei/1918921161?sku=102311970771&uniqueId=712630&cpa=1"
-              data-event="conv_partner-market"
+              data-event="conv_ya"
               target="_blank"
             >
               <span class="mp-item__info">
@@ -443,10 +479,10 @@
                   </p>
                 </div>
                 <a
-                  href="https://tele2.ru/tariffs"
+                  href="https://tele2.ru/mixx-max"
                   class="btn js-gtm-event box-content__link"
                   data-event-category="conversions"
-                  data-event="button_join"
+                  data-event="mixx"
                   data-section="section-join"
                   target="_blank"
                   >Подробнее</a
@@ -514,7 +550,7 @@
                 </p>
                 <a
                   class="btn btn-primary js-gtm-event"
-                  href="https://msk.tele2.ru/shop/checkout?simplePurchase=true&tariff=everywhere-online"
+                  href="https://spb.tele2.ru/shop/checkout?simplePurchase=true&tariff=super-online"
                   data-event="conv_connect"
                   target="_blank"
                   >Подключиться</a
