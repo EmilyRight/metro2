@@ -37,6 +37,8 @@
     .reactions-item {
       cursor: pointer;
       transition: 0.4s;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
       &:hover {
         transform: scale(0.9);
       }
@@ -44,17 +46,27 @@
         transform: scale(0.9);
         background-color: #d9d9d9;
       }
+      &__text {
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+      }
       &__image {
         display: flex;
         align-items: center;
         position: relative;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
       }
       &__image_invisible {
         position: absolute;
         transition: 0.8s;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
       }
       &__image_invisible.animated {
         animation: flyAway 1.5s linear 0s 1 normal forwards;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
       }
     }
   }
