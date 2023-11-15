@@ -40,10 +40,9 @@
       -webkit-tap-highlight-color: transparent;
       user-select: none;
       &:hover {
-        transform: scale(0.9);
       }
       &.clicked {
-        transform: scale(0.9);
+
         background-color: #d9d9d9;
       }
       &__text {
