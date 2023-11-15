@@ -89,6 +89,15 @@ function createNode(imageSrc) {
   return image;
 }
 
+function removeClickedClass(list, element) {
+  const newArray = [...Array.from(list)].filter((el) => el !== element);
+  newArray.forEach((reaction) => {
+    if (reaction.classList.contains('clicked')) {
+      reaction.classList.remove('clicked');
+    }
+  });
+}
+
 function handleReaction() {
   const reactionsList = document.querySelectorAll('.reactions-item');
   reactionsList.forEach((reaction) => {
@@ -97,6 +106,7 @@ function handleReaction() {
     const { src } = reactionImage;
     reaction.addEventListener('click', () => {
       const reactionAnimated = createNode(src);
+      removeClickedClass(reactionsList, reaction);
       reaction.classList.toggle('clicked');
       reactionImageBlock.append(reactionAnimated);
     });
