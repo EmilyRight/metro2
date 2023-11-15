@@ -38,7 +38,11 @@
       cursor: pointer;
       transition: 0.4s;
       &:hover {
-        transform: scale(.9);
+        transform: scale(0.9);
+      }
+      &.clicked {
+        transform: scale(0.9);
+        background-color: #d9d9d9;
       }
       &__image {
         display: flex;

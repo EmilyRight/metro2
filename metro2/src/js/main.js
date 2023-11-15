@@ -21,19 +21,84 @@ window.addEventListener('load', () => {
   handleReaction();
 });
 
-function removeAnimation(element) {
-  element.addEventListener('animationend', () => {
-    element.classList.remove('animated');
+/**
+ * @param {HTMLImageElement} element
+ * @param {Animation} animation
+ */
+
+function removeAnimation(element, animation) {
+  animation.finished.then(() => {
+    element.remove();
   });
+}
+
+/**
+ * @param {number} min
+ * @param {number} max
+ * @returns {number}
+ */
+function createRandomTranslate(min, max) {
+  const number = Math.random() * (max - min) + min;
+  return number;
+}
+
+/**
+ *
+ * @param {HTMLElement} element
+ * @returns {Animation}
+ */
+function createAnimation(element) {
+  const animation = new KeyframeEffect(
+    element,
+    [
+      { transform: 'translateX(0%) translateY(0%)', offset: 0 },
+
+      { transform: `translateX(${createRandomTranslate(-50, 50)}%) translateY(-100%)`, offset: 0.4 },
+      {
+        transform: `translateX(${createRandomTranslate(-50, 50)}%) translateY(-150%)`, offset: 0.8,
+      },
+      {
+        transform: `translateX(${createRandomTranslate(-50, 50)}%) translateY(-200%)`, opacity: 0, offset: 1,
+      },
+    ],
+    {
+      duration: 1500,
+      fill: 'forwards',
+      easing: 'linear',
+      iterations: 1,
+      direction: 'normal',
+    }, // keyframe options
+  );
+
+  return new Animation(animation, document.timeline);
+}
+
+/**
+ * @param {string} imageSrc
+ * @returns {HTMLImageElement}
+ */
+
+function createNode(imageSrc) {
+  const image = document.createElement('img');
+  image.src = imageSrc;
+  image.alt = '';
+  image.classList.add('reactions-item__image_invisible');
+  const animation = createAnimation(image);
+  animation.play();
+  removeAnimation(image, animation);
+  return image;
 }
 
 function handleReaction() {
   const reactionsList = document.querySelectorAll('.reactions-item');
   reactionsList.forEach((reaction) => {
-    const reactionImage = reaction.querySelector('.reactions-item__image_invisible');
+    const reactionImageBlock = reaction.querySelector('.reactions-item__image');
+    const reactionImage = reaction.querySelector('.reactions-item__image_visible');
+    const { src } = reactionImage;
     reaction.addEventListener('click', () => {
-      removeAnimation(reactionImage);
-      reactionImage.classList.add('animated');
+      const reactionAnimated = createNode(src);
+      reaction.classList.toggle('clicked');
+      reactionImageBlock.append(reactionAnimated);
     });
   });
 }
