@@ -23,11 +23,13 @@ class GTMEvents {
   */
   handleClick(event) {
     const className = 'js-gtm-event';
-    const target = (event.target.classList.contains(className))
-      ? event.target
-      : event.target.closest(`.${className}`);
+    const firstClickClassName = 'first-click';
+    const target = (
+      event.target.classList.contains(className)
+        ? event.target
+        : event.target.closest(`.${className}`));
 
-    if (target) {
+    if (target && !target.classList.contains(firstClickClassName)) {
       const eventBlock = target;
       const clickEventData = {
         eventAction: 'click',
@@ -38,6 +40,9 @@ class GTMEvents {
       };
 
       this.gaPush(clickEventData);
+      if (target.classList.contains('reactions-item')) {
+        target.classList.add(firstClickClassName);
+      }
     }
   }
 

@@ -235,10 +235,11 @@
     transform: translate(-20%, -100%);
   }
   80% {
-    transform: translate(20%, -150%);
+    // opacity: 0.5;
+    transform: translate(20%, -400%);
   }
   100% {
-    opacity: 0;
-    transform: translate(-20%, -200%);
+    // opacity: 0;
+    transform: translate(-20%, -700%);
   }
 }

@@ -55,10 +55,10 @@ function createAnimation(element) {
 
       { transform: `translateX(${createRandomTranslate(-50, 50)}%) translateY(-100%)`, offset: 0.4 },
       {
-        transform: `translateX(${createRandomTranslate(-50, 50)}%) translateY(-150%)`, offset: 0.8,
+        transform: `translateX(${createRandomTranslate(-50, 50)}%) translateY(-200%)`, opacity: 0.5, offset: 0.8,
       },
       {
-        transform: `translateX(${createRandomTranslate(-50, 50)}%) translateY(-200%)`, opacity: 0, offset: 1,
+        transform: `translateX(${createRandomTranslate(-50, 50)}%) translateY(-300%)`, opacity: 0, offset: 1,
       },
     ],
     {
@@ -107,7 +107,7 @@ function handleReaction() {
     reaction.addEventListener('click', () => {
       const reactionAnimated = createNode(src);
       removeClickedClass(reactionsList, reaction);
-      reaction.classList.toggle('clicked');
+      reaction.classList.add('clicked');
       reactionImageBlock.append(reactionAnimated);
     });
   });
