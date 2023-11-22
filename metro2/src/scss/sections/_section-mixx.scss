@@ -90,7 +90,7 @@
   @media (min-width: 600px) {
     .section-layer {
       display: block;
-      padding-top: 6.5rem;
+      padding-top: 4.5rem;
       padding-bottom: 3rem;
     }
     .section-mixx__content {
@@ -145,17 +145,18 @@
     }
 
     .box-pic {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex: none;
       width: 30%;
       position: relative;
       z-index: 10;
+      margin-top: -3rem;
       order: 2;
       img {
-        position: absolute;
         display: block;
-        left: 0;
-        max-width: 20rem;
+        width: 35rem;
       }
     }
   }

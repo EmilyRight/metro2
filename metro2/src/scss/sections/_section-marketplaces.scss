@@ -8,7 +8,7 @@
 
   .marketplaces-list_mobile {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     .mp-item {
       display: flex;
       flex-direction: column;
@@ -51,7 +51,9 @@
     }
     .marketplaces-list_desktop {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
+      gap: 6.3rem;
+      // max-width: 60%;
       .mp-item {
         display: flex;
         align-items: center;
