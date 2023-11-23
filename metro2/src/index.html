@@ -215,7 +215,7 @@
             <ul class="box-content__reactions-list reactions">
               <li
                 class="reactions__item reactions-item js-gtm-event"
-                data-event="reaction_inlove"
+                data-event="react_know"
               >
                 <p class="reactions-item__text">Уже знаю</p>
                 <div class="reactions-item__image">
@@ -233,7 +233,7 @@
               </li>
               <li
                 class="reactions__item reactions-item js-gtm-event"
-                data-event="reaction_thumb"
+                data-event="react_top"
               >
                 <p class="reactions-item__text">Топ</p>
                 <div class="reactions-item__image">
@@ -251,7 +251,7 @@
               </li>
               <li
                 class="reactions__item reactions-item js-gtm-event"
-                data-event="reaction_like"
+                data-event="react_going"
               >
                 <p class="reactions-item__text">Я&nbsp;к&nbsp;вам</p>
                 <div class="reactions-item__image">
@@ -319,7 +319,7 @@
             <a
               href="https://spb.tele2.ru/tariff/black"
               class="tariff__info link js-gtm-event"
-              data-event="tariff"
+              data-event="about_tariff"
               target="_blank"
               >Подробнее о&nbsp;тарифе</a
             >
@@ -360,10 +360,15 @@
             </ul>
             <div class="tariff__price-block price">
               <div class="price__text">
-                <span class="price__text_large">450</span>
-                <span class="price__text_uppercase"
-                  ><b>₽</b>&nbsp;&nbsp;в&nbsp;месяц</span
-                >
+                <div class="price__number">
+                  <span class="price__number_large price__number_new">450</span>
+                  <span class="price__number_large price__number_old"
+                    ><span>900</span>
+                    <span class="price__text_uppercase"><b>₽</b></span></span
+                  >
+                </div>
+
+                <span class="price__text_2">в&nbsp;месяц</span>
               </div>
               <div class="price__buttons">
                 <a
@@ -374,7 +379,7 @@
                   >Купить</a
                 >
                 <a
-                  href="https://tele2.ru/connectTariff"
+                  href="https://tele2.ru/connectTariff#mnp"
                   class="btn js-gtm-event"
                   data-event="conv_mnp"
                   target="_blank"
@@ -395,10 +400,10 @@
           >
             <li
               class="marketplaces-list__item mp-item js-gtm-event"
-              data-event="conv_ozon"
+              data-event="conv_partner-ozon"
             >
               <a
-                href="https://www.ozon.ru/product/sim-karta-tele2-sim-karta-tele2-moskva-moskovskaya-oblast-1138044514/?oos_search=false&sh=1ZPckiUiEQ"
+                href="https://www.ozon.ru/product/sim-karta-tele2-super-onlayn-sankt-peterburg-i-leningradskaya-oblast-balans-680-rub-1256277663/?oos_search=false"
                 class="mp-item__link"
                 target="_blank"
               >
@@ -410,10 +415,10 @@
             </li>
             <li
               class="marketplaces-list__item mp-item js-gtm-event"
-              data-event="conv_wb"
+              data-event="conv_partner-wild"
             >
               <a
-                href="https://www.wildberries.ru/catalog/172068306/detail.aspx?targetUrl=GP"
+                href="https://www.wildberries.ru/catalog/183669196/detail.aspx?targetUrl=GP"
                 class="mp-item__link"
                 target="_blank"
               >
@@ -425,10 +430,10 @@
             </li>
             <!-- <li
               class="marketplaces-list__item mp-item js-gtm-event"
-              data-event="conv_ya"
+              data-event="conv_partner-market"
             >
               <a
-                href="https://market.yandex.ru/product--sim-karta-tele2-dlia-moskovskoi-oblasti-balans-650-rublei/1918921161?sku=102311970771&uniqueId=712630&cpa=1"
+                href="https://market.yandex.ru/product--sim-karta-tele2-dlia-leningradskoi-oblasti-balans-680-rublei/16351442?sku=102475309898&uniqueId=712630&_redirectCount=1"
                 class="mp-item__link"
                 target="_blank"
               >
@@ -445,8 +450,8 @@
           >
             <a
               class="marketplaces-list__item mp-item js-gtm-event"
-              href="https://www.ozon.ru/product/sim-karta-tele2-sim-karta-tele2-moskva-moskovskaya-oblast-1138044514/?oos_search=false&sh=1ZPckiUiEQ"
-              data-event="conv_ozon"
+              href="https://www.ozon.ru/product/sim-karta-tele2-super-onlayn-sankt-peterburg-i-leningradskaya-oblast-balans-680-rub-1256277663/?oos_search=false"
+              data-event="conv_partner-ozon"
               target="_blank"
             >
               <span class="mp-item__info">
@@ -459,8 +464,8 @@
             </a>
             <a
               class="marketplaces-list__item mp-item js-gtm-event"
-              href="https://www.wildberries.ru/catalog/172068306/detail.aspx?targetUrl=GP"
-              data-event="conv_wb"
+              href="https://www.wildberries.ru/catalog/183669196/detail.aspx?targetUrl=GP"
+              data-event="conv_partner-wild"
               target="_blank"
             >
               <span class="mp-item__info">
@@ -473,8 +478,8 @@
             </a>
             <!-- <a
               class="marketplaces-list__item mp-item js-gtm-event"
-              href="https://market.yandex.ru/product--sim-karta-tele2-dlia-moskovskoi-oblasti-balans-650-rublei/1918921161?sku=102311970771&uniqueId=712630&cpa=1"
-              data-event="conv_ya"
+              href="https://market.yandex.ru/product--sim-karta-tele2-dlia-leningradskoi-oblasti-balans-680-rublei/16351442?sku=102475309898&uniqueId=712630&_redirectCount=1"
+              data-event="conv_partner-market"
               target="_blank"
             >
               <span class="mp-item__info">
@@ -536,7 +541,7 @@
                 </p>
                 <a
                   class="btn btn-primary js-gtm-event"
-                  href="https://spb.tele2.ru/shop/checkout?simplePurchase=true&tariff=super-online"
+                  href="https://spb.tele2.ru/tariff/black"
                   data-event="conv_connect"
                   target="_blank"
                   >Подключиться</a
@@ -558,10 +563,10 @@
                   </p>
                 </div>
                 <a
-                  href="https://tele2.ru/mixx-max"
+                  href="https://tele2.ru/option/mixx-s-present"
                   class="btn js-gtm-event box-content__link"
                   data-event-category="conversions"
-                  data-event="mixx"
+                  data-event="mixx-about"
                   data-section="section-join"
                   target="_blank"
                   >Подробнее</a
